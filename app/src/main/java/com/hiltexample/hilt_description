@@ -1,0 +1,44 @@
+
+
+
+Hilt === DI (Dependency Injection)
+
+It means we are Injecting Our Dependencies to the Dependent
+
+Here
+
+DEPENDENCIES:
+(Dependencies Means like Room Data Base we need to create only single object for room DB & Retrofit and Notification
+in this case we can consider all these as Dependencies
+
+DEPENDENT:
+and coming to Dependent is like Activities or Fragments which we need to use
+
+
+
+Example:
+
+Room Db , Retrofit , Repository === > All these are Dependencies (No Annotations) Must be confined in Module Class
+
+ViewModel,Activity, Fragment(Android Components like Activity , Broadcast Receivers, Content Providers , Service) == > All these are Dependents (Start with Annotations)
+
+ Activity (@AndroidEntryPoint)
+ Broadcast Receivers (@AndroidEntryPoint)
+ Content Providers (@AndroidEntryPoint)
+ Service (@AndroidEntryPoint)
+ ViewModel (@HiltViewModel)
+ Application Class (@HiltAndroidApp)
+
+
+
+Annotations :
+    @Inject
+    @Field
+    @Installin
+    @AndroidEntryPoint
+    @HiltApplication
+    @Provides
+    @Singleton
+    @InstallIn(SingletonComponent::class)
+
+
