@@ -1,28 +1,26 @@
 package com.hiltexample
 
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import java.util.ArrayList
 
 fun main() {
-    data class Student(var name: String, val age: Int)
-
-    val arraylist: ArrayList<Student> = ArrayList<Student>()
-    arraylist.add(Student("Mallangi", 14))
-    arraylist.add(Student("Parameswar", 23))
-    arraylist.add(Student("Parameswar", 23))
-    arraylist.add(Student("Reddy", 19))
-
-
-    val list = arraylist.filter { student: Student -> student.age < 18 }
-    println(list.size)
-
-    val list1 = arraylist.map { student: Student -> student.name + "  Reddy" }
-    println(list1.size)
-
-    list1.forEach {
-        println(it)
+    val xyz : ()->Unit={
+        println("This is Lambda function")
     }
-    val list2 = arraylist.remove(Student("Reddy",19))
+    println(xyz)
+
+
+    val mutableList : MutableList<Int> = mutableListOf<Int>()
+
+/*    mutableList?.add(20)
+    mutableList?.add(21)
+    mutableList?.add(22)
+    mutableList?.add(23)
+    mutableList?.add(24)*/
+
+
+    mutableList.let(){
+        println(it.map { it:Int -> it * 2 })
+    }
+
+
 }
