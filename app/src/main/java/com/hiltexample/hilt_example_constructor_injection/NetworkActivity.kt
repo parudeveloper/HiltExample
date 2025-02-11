@@ -20,6 +20,5 @@ class NetworkActivity : AppCompatActivity() {
         Log.i("NetWorkActivity", viewModel.getNetworkServiceData())
         Log.i("NetWorkActivity", viewModel.getApplicationService())
 
-
     }
 }
