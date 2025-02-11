@@ -42,3 +42,12 @@ Annotations :
     @InstallIn(SingletonComponent::class)
 
 
+    @SingletonComponent
+    @ViewModelComponent
+    @ActivityComponent
+    @FragmentComponent
+    @ViewComponent
+    @ServiceComponent
+
+
+
